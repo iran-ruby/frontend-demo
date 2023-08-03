@@ -1,7 +1,7 @@
 HOME_STRINGS = ["شیء گرا", "فانکشنال", "رویه ای"];
 
-pages = ["home", "simplicity"];
-activePage = 0;
+pages = ["home", "simplicity", "hello_world"];
+activePage = 1;
 
 $(document).ready(function () {
     function activatePage(index) {

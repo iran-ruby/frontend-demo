@@ -19,6 +19,8 @@ p,
 strong,
 span {
     font-family: "Nunito", "Vazir" !important;
+    text-align: right;
+    direction: rtl;
 }
 
 a {
@@ -36,6 +38,10 @@ html {
     overflow: hidden;
     user-select: none;
     -webkit-user-drag: none;
+}
+
+.colored-text {
+    color: $color4;
 }
 
 .animate__animated {
@@ -85,6 +91,7 @@ html {
     z-index: 80;
     width: 100%;
     padding: 20px 0;
+    direction: ltr;
     // border-bottom: 1px solid #181818;
     #navbar {
         position: relative;
@@ -132,6 +139,11 @@ html {
     overflow: hidden;
 }
 
+.important-text {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .page {
     overflow: hidden;
     position: absolute;
@@ -142,6 +154,64 @@ html {
     &.active {
         opacity: 1;
         z-index: 90;
+    }
+    .page-header,
+    .page-header span {
+        font-family: "ReemKufi" !important;
+    }
+    .page-header {
+        color: #fff;
+        font-size: 55px;
+        margin-top: 30px;
+    }
+    .page-text {
+        color: #fff;
+        font-size: 20px;
+    }
+    .container {
+        position: relative;
+        right: 50%;
+        transform: translate(50%);
+        width: 90%;
+        height: 100%;
+    }
+    .page-navigation {
+        position: absolute;
+        right: 0;
+        bottom: 50px;
+        display: flex;
+        button {
+            cursor: pointer;
+            --size: 50px;
+            margin: 0 5px;
+            width: var(--size);
+            height: var(--size);
+            background: $color3;
+            border: none;
+            outline: none;
+            font-size: 35px;
+            color: #fff;
+            i {
+                position: relative;
+                bottom: -20px;
+            }
+        }
+    }
+}
+
+#simplicity {
+    #simplicity-img {
+        position: absolute;
+        width: 500px;
+        left: 100px;
+        bottom: -20px;
+        z-index: 20;
+    }
+
+    .light_bulb {
+        bottom: -470px;
+        left: -470px;
+        opacity: 20%;
     }
 }
 
