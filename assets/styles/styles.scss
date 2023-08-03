@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.ttf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito.ttf");
+}
+
+@font-face {
+    font-family: "ReemKufi";
+    src: url("../fonts/ReemKufi.ttf");
+}
+
+body,
+a,
+p,
+strong,
+span {
+    font-family: "Nunito", "Vazir" !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+$color1: #868686;
+$color2: #0b0b0b;
+$color3: #950000;
+$color4: #ca0000;
+$color5: #c10212;
+
+html {
+    background-color: $color2;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.uk-button {
+    transition: 0.2s ease-in;
+    &.uk-button-default {
+        color: $color1;
+        border: 1px solid $color1;
+        border-radius: 16px;
+        padding-bottom: 3px;
+        &:hover {
+            color: $color2;
+            background-color: $color1;
+        }
+    }
+}
+
+#intro_glass {
+    position: absolute;
+    --space: 40px;
+    left: 20px;
+    top: 20px;
+    width: calc(100% - var(--space));
+    height: calc(100% - var(--space));
+    &::before {
+        border-radius: 10px;
+        position: absolute;
+        background: inherit;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: "";
+
+        background: #17171780;
+        backdrop-filter: blur(20px);
+    }
+}
+#header {
+    position: relative;
+    z-index: 80;
+    width: 100%;
+    padding: 20px 0;
+    // border-bottom: 1px solid #181818;
+    #navbar {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 96%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #brand_name {
+            img {
+                height: 60px;
+            }
+        }
+        .navbar-item {
+            position: relative;
+            font-size: 17px;
+            font-weight: bold;
+            color: $color1;
+            margin: 0 15px;
+            &-active {
+                color: #fff;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 45%;
+                    height: 3px;
+                    background-color: $color4;
+                    box-shadow: 0px 0px 30px 8px $color3;
+                    border-radius: 50px;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+            }
+        }
+    }
+}
+
+.light_bulb {
+    position: fixed;
+    --size: 1000px;
+    width: var(--size);
+    height: var(--size);
+    overflow: hidden;
+}
+
+.page {
+    position: relative;
+    height: 100vh;
+}
+
+#home {
+    #home_content {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 75px;
+        #home_text {
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            font-family: "ReemKufi";
+        }
+    }
+
+    .light_bulb {
+        &:nth-child(2) {
+            bottom: -470px;
+            left: -470px;
+        }
+        &:nth-child(3) {
+            bottom: -470px;
+            right: -470px;
+        }
+    }
+}
