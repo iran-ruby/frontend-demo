@@ -24,11 +24,15 @@ a {
 
 html {
   background-color: #0b0b0b;
-  overflow-x: hidden;
+  overflow: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   -webkit-user-drag: none;
+}
+
+.animate__animated {
+  --animate-duration: 0.4s;
 }
 
 .uk-button {
@@ -120,8 +124,16 @@ html {
 }
 
 .page {
-  position: relative;
+  overflow: hidden;
+  position: absolute;
   height: 100vh;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+.page.active {
+  opacity: 1;
+  z-index: 90;
 }
 
 #home #home_content {
@@ -143,4 +155,26 @@ html {
 #home .light_bulb:nth-child(3) {
   bottom: -470px;
   right: -470px;
+}
+@keyframes homeNextPageIconAnimation {
+  0% {
+    margin-top: 5px;
+  }
+  50% {
+    margin-top: 35px;
+  }
+  100% {
+    margin-top: 5px;
+  }
+}
+#home #home_next_page {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 5px;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  animation: homeNextPageIconAnimation 1s linear infinite;
 }/*# sourceMappingURL=styles.css.map */
