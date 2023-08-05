@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آکادمی روبی ایران</title>
+
+    <link rel="stylesheet" href="./assets/styles/uikit.min.css" />
+    <link rel="stylesheet" href="./assets/styles/line-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/styles/animate.min.css" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+  </head>
+  <body>
+    <div id="header" class="header-flat">
+      <div id="navbar">
+        <a id="brand_name" href="/">
+          <img src="./assets/images/logo.png" alt="Logo" />
+        </a>
+        <div>
+          <a class="navbar-item navbar-item-active" href="/">خانه</a>
+          <a class="navbar-item" href="/">دوره ها</a>
+          <a class="navbar-item" href="/">وبلاگ</a>
+          <a class="navbar-item" href="/">درباه ما</a>
+        </div>
+        <div>
+          <a class="navbar-item" href="/signin.html">ورود</a>
+          <a class="uk-button uk-button-default uk-text-bold" href="/">ثبت نام</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="signin_form" class="form">
+      <div id="signin_light_bulbs">
+        <div class="light_bulb light_bulb_1">
+          <img src="./assets/images/bulb1.png" />
+        </div>
+
+        <div class="light_bulb light_bulb_1">
+          <img src="./assets/images/bulb1.png" />
+        </div>
+      </div>
+
+      <div class="form-content">
+        <h1 class="form-header">ورود</h1>
+
+        <div class="uk-margin">
+          <div class="uk-inline">
+            <label class="form-label">ایمیل</label>
+            <span class="uk-form-icon">
+              <i class="las la-user"></i>
+            </span>
+            <input class="uk-input" type="text" />
+          </div>
+        </div>
+
+        <div class="uk-margin">
+          <div class="uk-inline">
+            <label class="form-label">پسوورد</label>
+            <span class="uk-form-icon">
+              <i class="las la-lock"></i>
+            </span>
+            <input class="uk-input" type="password" />
+          </div>
+        </div>
+
+        <div class="uk-margin">
+          <label class="colored-text-white"><input class="uk-checkbox" type="checkbox" checked /> من را بخاطر بسپار</label>
+        </div>
+
+        <div>
+          <button class="uk-button uk-button-primary" onclick="setLoadingButton(this)">
+            <span>ارسال</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/uikit.min.js"></script>
+    <script src="./assets/js/typewriter.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>

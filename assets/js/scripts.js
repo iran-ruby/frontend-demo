@@ -1,7 +1,7 @@
 HOME_STRINGS = ["شیء گرا", "فانکشنال", "رویه ای"];
 
 pages = ["home", "simplicity", "hello_world"];
-activePage = 1;
+activePage = 0;
 
 $(document).ready(function () {
     function activatePage(index) {
@@ -94,6 +94,15 @@ $(document).ready(function () {
         }, 750);
     });
 
+    function setLoadingButton(button) {
+        const icon = '<i class="las la-circle-notch"></i>';
+        if ($(button).has("i").length == 0) {
+            $(button).append(icon);
+            $(button).addClass("loading");
+        }
+    }
+
+    window.setLoadingButton = setLoadingButton;
     window.activatePage = activatePage;
     window.activePage = activePage;
     window.nextPage = nextPage;
