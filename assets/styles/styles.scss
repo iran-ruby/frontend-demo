@@ -35,7 +35,6 @@ $color5: #c10212;
 
 html {
     background-color: $color2;
-    overflow: hidden;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -111,13 +110,14 @@ html {
         height: 45px;
     }
     position: relative;
-    width: 380px;
+    width: 450px;
     &.form-large {
         width: 550px;
     }
     right: 50%;
     transform: translate(50%);
-    margin-top: 120px;
+    margin-top: 140px;
+    margin-bottom: 70px;
     .form-header {
         font-size: 40px;
         font-family: "ReemKufi";
@@ -133,7 +133,8 @@ html {
     }
 }
 
-#signin_light_bulbs {
+#signin_light_bulbs,
+#signup_light_bulbs {
     position: absolute;
     top: 0;
     left: 0;
@@ -155,6 +156,121 @@ html {
         &:nth-child(2) {
             bottom: -180px;
             right: -200px;
+        }
+    }
+}
+
+#signup_light_bulbs {
+    .light_bulb {
+        &:nth-child(1) {
+            top: 180px;
+            left: -200px;
+        }
+        &:nth-child(2) {
+            top: -180px;
+            right: -200px;
+        }
+    }
+}
+
+#products_light_bulbs {
+    position: fixed;
+    right: -550px;
+    bottom: -500px;
+    --size: 1200px;
+    width: var(--size);
+    height: var(--size);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#products {
+    margin-top: 130px;
+    margin-bottom: 130px;
+    #products_header {
+        color: #fff;
+        font-size: 50px;
+        font-family: "ReemKufi";
+    }
+    #products_grid {
+        @media screen and (max-width: 1200px) {
+            & {
+                grid-template-columns: 50% 50%;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            & {
+                grid-template-columns: 100%;
+                .product_item .product_cover {
+                    height: 350px;
+                }
+            }
+        }
+        @media screen and (max-width: 550px) {
+            & {
+                .product_item .product_cover {
+                    height: 300px;
+                }
+            }
+        }
+        @media screen and (max-width: 450px) {
+            & {
+                .product_item .product_cover {
+                    height: 250px;
+                }
+            }
+        }
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-gap: 15px;
+    }
+    .product_item {
+        &:hover {
+            .product_likes {
+                opacity: 1;
+            }
+        }
+        position: relative;
+        width: 100%;
+        @keyframes gradientAnimation {
+            0% {
+                background-color: #1d1d1d;
+            }
+            50% {
+                background-color: #333333;
+            }
+            100% {
+                background-color: #1d1d1d;
+            }
+        }
+        .product_cover {
+            width: 100%;
+            height: 240px;
+            animation: gradientAnimation 5s ease-in-out infinite;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        .product_header {
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            font-family: "Vazir", "Nunito";
+            margin: 13px 0;
+        }
+        .product_likes {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            z-index: 20;
+            color: white;
+            font-family: "ReemKufi";
+            i {
+                position: relative;
+                top: 3px;
+                font-size: 25px;
+            }
         }
     }
 }
@@ -181,7 +297,7 @@ html {
     }
     transition: 0.2s ease-in;
     border-radius: 8px;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     &.uk-button-default {
         &:hover {
             color: $color2;
@@ -269,6 +385,10 @@ html {
         }
     }
     &.header-flat {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         padding: 15px 0;
         border-bottom: 1px solid #181818;
         #navbar #brand_name {
