@@ -500,4 +500,11 @@ html {
   cursor: pointer;
   padding: 20px;
   animation: homeNextPageIconAnimation 1s linear infinite;
+}
+
+.window-code {
+  width: 75%;
+  position: absolute;
+  bottom: 30px;
+  left: -20px;
 }/*# sourceMappingURL=styles.css.map */
