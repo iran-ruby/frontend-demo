@@ -544,3 +544,19 @@ html {
   bottom: 30px;
   left: -20px;
 }
+
+#commounity {
+  #commounity-img {
+    position: absolute;
+    width: 500px;
+    left: 100px;
+    bottom: 20px;
+    z-index: 20;
+  }
+
+  .light_bulb {
+    bottom: -470px;
+    left: -470px;
+    opacity: 20%;
+  }
+}
