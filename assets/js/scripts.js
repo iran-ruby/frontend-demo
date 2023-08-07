@@ -8,8 +8,9 @@ pages = [
   "usage",
   "usage2",
   "usage3",
+  "usage4",
 ];
-activePage = 6;
+activePage = 7;
 
 $(document).ready(function () {
   function activatePage(index) {
