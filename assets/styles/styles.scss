@@ -561,10 +561,11 @@ html {
   }
 }
 
-#usage {
-.page-text{
-  margin-top: 150px;
-}
+#usage,
+#usage2 {
+  .page-text {
+    margin-top: 150px;
+  }
 
   #usage-img {
     position: absolute;
@@ -593,12 +594,22 @@ html {
 
     p {
       position: absolute;
-      top: 40px;
+      top: 50px;
       left: 40px;
       font-size: 50px;
       font-weight: 800;
       font-family: "ReemKufi" !important;
       color: #fff;
+    }
+  }
+}
+
+#usage2 {
+  .number_usage {
+    p {
+      position: absolute;
+      top: 50px;
+      left: 40px;
     }
   }
 }

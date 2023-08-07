@@ -522,22 +522,26 @@ html {
   opacity: 20%;
 }
 
-#usage .page-text {
+#usage .page-text,
+#usage2 .page-text {
   margin-top: 150px;
 }
-#usage #usage-img {
+#usage #usage-img,
+#usage2 #usage-img {
   position: absolute;
   width: 500px;
   left: 100px;
   bottom: 20px;
   z-index: 20;
 }
-#usage .light_bulb {
+#usage .light_bulb,
+#usage2 .light_bulb {
   top: -470px;
   left: -470px;
   opacity: 50%;
 }
-#usage .number_usage span {
+#usage .number_usage span,
+#usage2 .number_usage span {
   position: absolute;
   top: -60px;
   left: 0px;
@@ -546,12 +550,19 @@ html {
   font-family: "ReemKufi" !important;
   opacity: 60%;
 }
-#usage .number_usage p {
+#usage .number_usage p,
+#usage2 .number_usage p {
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 40px;
   font-size: 50px;
   font-weight: 800;
   font-family: "ReemKufi" !important;
   color: #fff;
+}
+
+#usage2 .number_usage p {
+  position: absolute;
+  top: 50px;
+  left: 40px;
 }/*# sourceMappingURL=styles.css.map */
