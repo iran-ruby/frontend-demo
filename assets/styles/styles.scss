@@ -608,3 +608,28 @@ html {
     }
   }
 }
+
+#aboutRuby {
+  .light_bulb {
+    top: -470px;
+    left: -470px;
+    opacity: 20%;
+  }
+
+  .page-text {
+    font-size: 35px;
+  }
+
+  span {
+    color: #950000;
+  }
+
+  .aboutRuby-img {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+}

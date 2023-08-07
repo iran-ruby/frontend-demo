@@ -9,8 +9,9 @@ pages = [
   "usage2",
   "usage3",
   "usage4",
+  "aboutRuby",
 ];
-activePage = 7;
+activePage = 0;
 
 $(document).ready(function () {
   function activatePage(index) {
