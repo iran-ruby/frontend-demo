@@ -411,8 +411,10 @@ html {
 }
 
 .important-text {
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: underline;
+  word-spacing: 6px;
+  line-height: 47px;
 }
 
 .page {
@@ -440,6 +442,7 @@ html {
     font-size: 26px;
     max-width: 90%;
     word-spacing: 6px;
+    line-height: 47px;
   }
   .container {
     position: relative;
@@ -562,7 +565,9 @@ html {
 }
 
 #usage,
-#usage2 {
+#usage2,
+#usage3,
+#usage4 {
   .page-text {
     margin-top: 150px;
   }
@@ -600,16 +605,6 @@ html {
       font-weight: 800;
       font-family: "ReemKufi" !important;
       color: #fff;
-    }
-  }
-}
-
-#usage2 {
-  .number_usage {
-    p {
-      position: absolute;
-      top: 50px;
-      left: 40px;
     }
   }
 }

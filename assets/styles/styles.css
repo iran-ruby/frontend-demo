@@ -385,8 +385,10 @@ html {
 }
 
 .important-text {
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: underline;
+  word-spacing: 6px;
+  line-height: 47px;
 }
 
 .page {
@@ -415,6 +417,7 @@ html {
   font-size: 26px;
   max-width: 90%;
   word-spacing: 6px;
+  line-height: 47px;
 }
 .page .container {
   position: relative;
@@ -523,11 +526,15 @@ html {
 }
 
 #usage .page-text,
-#usage2 .page-text {
+#usage2 .page-text,
+#usage3 .page-text,
+#usage4 .page-text {
   margin-top: 150px;
 }
 #usage #usage-img,
-#usage2 #usage-img {
+#usage2 #usage-img,
+#usage3 #usage-img,
+#usage4 #usage-img {
   position: absolute;
   width: 500px;
   left: 100px;
@@ -535,13 +542,17 @@ html {
   z-index: 20;
 }
 #usage .light_bulb,
-#usage2 .light_bulb {
+#usage2 .light_bulb,
+#usage3 .light_bulb,
+#usage4 .light_bulb {
   top: -470px;
   left: -470px;
   opacity: 50%;
 }
 #usage .number_usage span,
-#usage2 .number_usage span {
+#usage2 .number_usage span,
+#usage3 .number_usage span,
+#usage4 .number_usage span {
   position: absolute;
   top: -60px;
   left: 0px;
@@ -551,7 +562,9 @@ html {
   opacity: 60%;
 }
 #usage .number_usage p,
-#usage2 .number_usage p {
+#usage2 .number_usage p,
+#usage3 .number_usage p,
+#usage4 .number_usage p {
   position: absolute;
   top: 50px;
   left: 40px;
@@ -559,10 +572,4 @@ html {
   font-weight: 800;
   font-family: "ReemKufi" !important;
   color: #fff;
-}
-
-#usage2 .number_usage p {
-  position: absolute;
-  top: 50px;
-  left: 40px;
 }/*# sourceMappingURL=styles.css.map */
