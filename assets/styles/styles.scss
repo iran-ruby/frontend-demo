@@ -560,3 +560,45 @@ html {
     opacity: 20%;
   }
 }
+
+#usage {
+.page-text{
+  margin-top: 150px;
+}
+
+  #usage-img {
+    position: absolute;
+    width: 500px;
+    left: 100px;
+    bottom: 20px;
+    z-index: 20;
+  }
+
+  .light_bulb {
+    top: -470px;
+    left: -470px;
+    opacity: 50%;
+  }
+
+  .number_usage {
+    span {
+      position: absolute;
+      top: -60px;
+      left: 0px;
+      font-size: 200px;
+      font-weight: 800;
+      font-family: "ReemKufi" !important;
+      opacity: 60%;
+    }
+
+    p {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      font-size: 50px;
+      font-weight: 800;
+      font-family: "ReemKufi" !important;
+      color: #fff;
+    }
+  }
+}
