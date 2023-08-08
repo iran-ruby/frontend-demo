@@ -13,12 +13,14 @@
   src: url("../fonts/ReemKufi.ttf");
 }
 
+$responsive-page-breakpoint: 1300px;
+
 body,
 a,
 p,
 strong,
 span {
-  font-weight: 200;
+  font-weight: 400;
   font-family: "Nunito", "Vazir" !important;
   text-align: right;
   direction: rtl;
@@ -33,24 +35,6 @@ $color2: #0b0b0b;
 $color3: #950000;
 $color4: #ca0000;
 $color5: #c10212;
-
-html {
-  background-color: $color2;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-.colored-text {
-  color: $color4;
-}
-
-.colored-text-white {
-  color: #fff;
-}
-
-.animate__animated {
-  --animate-duration: 0.4s;
-}
 
 .uk-form-icon {
   color: #fff;
@@ -93,6 +77,25 @@ html {
   }
   backdrop-filter: blur(20px);
   direction: ltr;
+}
+
+html {
+  background-color: $color2;
+  user-select: none;
+  -webkit-user-drag: none;
+  overflow-x: hidden;
+}
+
+.colored-text {
+  color: $color4;
+}
+
+.colored-text-white {
+  color: #fff;
+}
+
+.animate__animated {
+  --animate-duration: 0.4s;
 }
 
 .form {
@@ -404,6 +407,7 @@ html {
 
 .light_bulb {
   position: fixed;
+  z-index: -1;
   --size: 1000px;
   width: var(--size);
   height: var(--size);
@@ -418,15 +422,18 @@ html {
 }
 
 .page {
-  overflow: hidden;
   position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
   height: 100vh;
   width: 100%;
-  z-index: 10;
-  opacity: 0;
+  z-index: 1;
+  display: none;
   padding-top: 30px;
   &.active {
-    opacity: 1;
+    display: block;
     z-index: 90;
   }
   .page-header,
@@ -436,13 +443,35 @@ html {
   .page-header {
     color: #fff;
     font-size: 50px;
+    @media screen and (max-width: $responsive-page-breakpoint) {
+      & {
+        font-size: 25px;
+      }
+    }
   }
   .page-text {
+    position: relative;
+    z-index: 40;
     color: #fff;
-    font-size: 26px;
-    max-width: 90%;
-    word-spacing: 6px;
-    line-height: 47px;
+    font-size: 23px;
+    word-spacing: 5px;
+    line-height: 43px;
+    width: 100%;
+    display: block;
+  }
+  @media screen and (max-width: $responsive-page-breakpoint) {
+    .page-text {
+      &:last-child {
+        padding-bottom: 70px;
+      }
+
+      font-size: 20px;
+    }
+    .page-navigation {
+      position: static;
+      bottom: unset !important;
+      margin-bottom: 20px;
+    }
   }
   .container {
     position: relative;
@@ -452,7 +481,8 @@ html {
     height: 100%;
   }
   .page-navigation {
-    position: absolute;
+    position: fixed;
+    z-index: 45;
     right: 0;
     bottom: 50px;
     display: flex;
@@ -475,13 +505,49 @@ html {
   }
 }
 
+#simplicity2 {
+  img {
+    width: 75%;
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+  }
+
+  @media screen and (max-width: $responsive-page-breakpoint) {
+    img {
+      width: 90%;
+    }
+  }
+}
+
 #simplicity {
   #simplicity-img {
     position: absolute;
     width: 500px;
     left: 100px;
-    bottom: -20px;
-    z-index: 20;
+    bottom: 20px;
+    z-index: -1;
+  }
+
+  @media screen and (max-width: $responsive-page-breakpoint) {
+    #simplicity-img {
+      position: fixed;
+      width: 650px;
+      bottom: -5px;
+      left: 40px;
+      float: left;
+      opacity: 0.6;
+    }
+
+    & {
+      padding-bottom: 160px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    #simplicity-img {
+      width: 450px;
+      left: 20px;
+    }
   }
 
   .light_bulb {
@@ -492,16 +558,39 @@ html {
 }
 
 #home {
+  overflow: hidden;
+  max-height: 100%;
   #home_content {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    margin-top: 75px;
+    margin-top: 55px;
+    img {
+      width: 350px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      img {
+        width: 300px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      img {
+        width: 250px;
+      }
+    }
+
     #home_text {
       font-size: 40px;
       color: #fff;
       text-align: center;
       font-family: "ReemKufi";
+      span {
+        font-weight: bold;
+      }
+      margin-top: 10px;
+      margin-bottom: 0;
     }
   }
 
@@ -541,13 +630,6 @@ html {
   }
 }
 
-.window-code {
-  width: 75%;
-  position: absolute;
-  bottom: 30px;
-  left: -20px;
-}
-
 #commounity {
   #commounity-img {
     position: absolute;
@@ -557,10 +639,19 @@ html {
     z-index: 20;
   }
 
+  @media screen and (max-width: $responsive-page-breakpoint) {
+    #commounity-img {
+      position: fixed;
+      width: 350px;
+      bottom: -5px;
+      left: 20px;
+      float: left;
+      opacity: 0.6;
+    }
+  }
+
   .light_bulb {
-    bottom: -470px;
-    left: -470px;
-    opacity: 20%;
+    display: none;
   }
 }
 
@@ -607,6 +698,19 @@ html {
       color: #fff;
     }
   }
+
+  @media screen and (max-width: $responsive-page-breakpoint) {
+    .number_usage {
+      span {
+        font-size: 170px;
+      }
+      p {
+        top: 35px;
+        left: 30px;
+        font-size: 38px;
+      }
+    }
+  }
 }
 
 #aboutRuby {
@@ -617,11 +721,11 @@ html {
   }
 
   .page-text {
-    font-size: 35px;
+    font-size: 15px;
   }
 
   span {
-    color: #950000;
+    color: $color3;
   }
 
   .aboutRuby-img {
@@ -630,6 +734,5 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-   
   }
 }
