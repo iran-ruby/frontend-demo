@@ -362,6 +362,22 @@ html {
   left: 50%;
   transform: translate(-50%);
 }
+#header #full_screen_menu {
+  display: none;
+}
+#header #navbar_mobile #toggle_menu_button {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1300px) {
+  #header #navbar_desktop {
+    display: none;
+  }
+}
 #header.header-flat {
   position: fixed;
   top: 0;
@@ -403,11 +419,13 @@ html {
   width: 100%;
   z-index: 1;
   display: none;
-  padding-top: 30px;
 }
 .page.active {
   display: block;
   z-index: 90;
+}
+.page .page-header {
+  margin-top: 30px;
 }
 .page .page-header,
 .page .page-header span {

@@ -388,6 +388,27 @@ html {
       }
     }
   }
+
+  #full_screen_menu {
+    display: none;
+  }
+
+  #navbar_mobile {
+    #toggle_menu_button {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: $responsive-page-breakpoint) {
+    #navbar_desktop {
+      display: none;
+    }
+  }
   &.header-flat {
     position: fixed;
     top: 0;
@@ -431,10 +452,12 @@ html {
   width: 100%;
   z-index: 1;
   display: none;
-  padding-top: 30px;
   &.active {
     display: block;
     z-index: 90;
+  }
+  .page-header {
+    margin-top: 30px;
   }
   .page-header,
   .page-header span {
