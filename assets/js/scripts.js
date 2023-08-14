@@ -12,6 +12,7 @@ pages = [
   "aboutRuby",
 ];
 activePage = 0;
+const responsivePageBreakpoint = 1300;
 
 $(document).ready(function () {
   function activatePage(index) {
@@ -85,6 +86,11 @@ $(document).ready(function () {
 
   $(document).on("wheel", function (e) {
     const delta = e.originalEvent.deltaY;
+
+    const windowWidth = $(window).width();
+    if (windowWidth <= responsivePageBreakpoint) {
+      return;
+    }
 
     if (changingPage != true) {
       changingPage = true;
