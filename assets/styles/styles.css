@@ -76,6 +76,10 @@ html {
   color: #ca0000;
 }
 
+.colored-green {
+  color: #498b20;
+}
+
 .colored-text-white {
   color: #fff;
 }
@@ -171,6 +175,60 @@ html {
   height: var(--size);
   z-index: -1;
   opacity: 0.5;
+}
+
+#product_light_bulbs {
+  position: fixed;
+  right: -550px;
+  bottom: -500px;
+  --size: 1200px;
+  width: var(--size);
+  height: var(--size);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+#product {
+  width: 1200px;
+  margin-top: 130px;
+}
+#product .product_cover {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+#product .product_header {
+  font-size: 30px;
+  font-family: "ReemKufi";
+  color: #fff;
+}
+#product #product_content_grid {
+  display: grid;
+  grid-template-columns: auto 350px;
+}
+
+.glass_box {
+  background-color: rgba(11, 11, 11, 0.2);
+  border: 1px solid #1d1d1d;
+  border-radius: 8px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
+.glass_box .divider {
+  border-bottom: 1px solid #1d1d1d;
+  width: 100%;
+  margin: 10px 0;
+}
+.glass_box .colored-green {
+  font-weight: bold;
+}
+.glass_box h3 {
+  font-weight: 300;
+  margin: 10px 0;
+  font-size: 17px;
+  color: #fff;
+  font-family: "Vazir", "Nunito";
 }
 
 #products {

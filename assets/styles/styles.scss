@@ -35,6 +35,7 @@ $color2: #0b0b0b;
 $color3: #950000;
 $color4: #ca0000;
 $color5: #c10212;
+$color6: #498b20;
 
 .uk-form-icon {
   color: #fff;
@@ -88,6 +89,10 @@ html {
 
 .colored-text {
   color: $color4;
+}
+
+.colored-green {
+  color: $color6;
 }
 
 .colored-text-white {
@@ -186,6 +191,60 @@ html {
   height: var(--size);
   z-index: -1;
   opacity: 0.5;
+}
+
+#product_light_bulbs {
+  position: fixed;
+  right: -550px;
+  bottom: -500px;
+  --size: 1200px;
+  width: var(--size);
+  height: var(--size);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+#product {
+  width: 1200px;
+  margin-top: 130px;
+  .product_cover {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+  }
+  .product_header {
+    font-size: 30px;
+    font-family: "ReemKufi";
+    color: #fff;
+  }
+  #product_content_grid {
+    display: grid;
+    grid-template-columns: auto 350px;
+  }
+}
+
+.glass_box {
+  background-color: #0b0b0b33;
+  border: 1px solid #1d1d1d;
+  border-radius: 8px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+  .divider {
+    border-bottom: 1px solid #1d1d1d;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .colored-green {
+    font-weight: bold;
+  }
+  h3 {
+    font-weight: 300;
+    margin: 10px 0;
+    font-size: 17px;
+    color: #fff;
+    font-family: "Vazir", "Nunito";
+  }
 }
 
 #products {
